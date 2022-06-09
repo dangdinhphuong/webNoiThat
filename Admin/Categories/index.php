@@ -69,6 +69,7 @@ else if (exist_param("delete")) {
 
 else {
     $loai_hang = loai_select_all();
+
     $VIEW_NAME = "../Categories/list.php";
     // dd($loai_hang);
 }

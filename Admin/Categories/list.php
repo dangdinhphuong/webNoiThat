@@ -43,7 +43,8 @@
                         <tr>
 
                             <th>#</th>
-                            <th>Tên sản phẩm</th>
+                            <th>Tên loại sản phẩm</th>
+                            <th>Hình ảnh loại sản phẩm</th>
                             <th>Hành động</th>
 
                         </tr>
@@ -53,11 +54,13 @@
                     <tbody>
                         <?php
                         foreach ($loai_hang as $item) {
+                       
                             extract($item);
                         ?>
                             <tr>
-                                <td><?= $MALSP ?></td>
+                                <td><?= $MALSP ?> <?= $anh ?></td>
                                 <td><?= $TENLSP ?></td>
+                                <td class="w-50"><img class="w-50" src="../../storage/images/category/<?= $anh ?>"></td>
                                 <td>
                                     <a href="?edit&MALSP=<?= $MALSP ?>"><i class="fa-solid fa-pen"></i></a>
                                     <a onclick="return confirm('Ban có muốn xóa hay không ?')" href="?delete&MALSP=<?= $MALSP ?>"><i class="fa-solid fa-trash-can"></i></i></a>
