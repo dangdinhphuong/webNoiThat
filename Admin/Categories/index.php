@@ -16,15 +16,17 @@ else if (exist_param("store")) {
     if (isset($_POST) & !empty($_POST)) {
 
         extract($_REQUEST);
-
         try {
-            loai_insert($TENLSP);
+            // lưu hình ảnh vào forder storage
+            $up_hinh = save_file("anh", "$IMAGE_DIR/category/");
+            loai_insert($TENLSP,$up_hinh);
             $MESSAGE = "Thêm mới thành công!";
         } catch (Exception $exc) {
             $MESSAGE = "Thêm mới thất bại!" . $exc->getMessage();
         }
     }
-    $VIEW_NAME = "../Categories/create.php";
+    // $VIEW_NAME = "../Categories/create.php";
+   header("location:$ADMIN_URL/Categories");
 }
 // edit from category
 else if (exist_param("edit")) {

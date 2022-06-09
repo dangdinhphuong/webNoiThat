@@ -25,9 +25,9 @@ function loai_select_all(){
  * @param String $ten_loai là tên loại
  * @throws PDOException lỗi thêm mới
  */
-function loai_insert($TENLSP){
-    $sql = "INSERT INTO loaisp (TENLSP) VALUES(?)";
-    pdo_execute($sql, $TENLSP);
+function loai_insert($TENLSP,$anh){
+    $sql = "INSERT INTO loaisp (TENLSP,anh) VALUES(?,?)";
+    pdo_execute($sql, $TENLSP,$anh);
 }
 
 /**

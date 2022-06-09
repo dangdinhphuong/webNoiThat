@@ -3,15 +3,16 @@ session_start();
 /*
  * Định nghĩa các url cần thiết được sử dụng trong website
  */
-$ROOT_URL = "/php1";
-$CONTENT_URL = "$ROOT_URL/content";
-$ADMIN_URL = "$ROOT_URL/admin";
-$SITE_URL = "$ROOT_URL/site";
+$ROOT_URL = "/webNoiThat";
+$CONTENT_URL = "$ROOT_URL/storage";
+$ADMIN_URL = "$ROOT_URL/Admin";
+$CLIENT_URL = "$ROOT_URL/Client";
 
 /*
  * Định nghĩa đường dẫn chứa ảnh sử dụng trong upload
  */
-$IMAGE_DIR = $_SERVER["DOCUMENT_ROOT"] . "$ROOT_URL/content/images";
+// $_SERVER["DOCUMENT_ROOT"] :"D:/xampp2/xampp/htdocs/
+$IMAGE_DIR = $_SERVER["DOCUMENT_ROOT"] . "$CONTENT_URL/images";
 
 /*
  * 2 biến toàn cục cần thiết để chia sẻ giữa controller và view
@@ -45,6 +46,7 @@ function save_file($fieldname, $target_dir){
     $file_name = basename($file_uploaded["name"]);
     $target_path = $target_dir . $file_name;
     move_uploaded_file($file_uploaded["tmp_name"], $target_path);
+   // move_uploaded_file($tmp_names, $target_dir .$target_file );
     return $file_name;
 }
 /**
