@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <!-- DATA TABLE-->
             <div class="table-responsive m-b-40">
-                <table class="table table-borderless table-data3">
+                <div class="table table-borderless table-data3">
                     <div class="table-data__tool">
                         <div class="table-data__tool-left">
                             <div class="rs-select2--light rs-select2--md">
@@ -38,34 +38,46 @@
                             </div>
                         </div>
                     </div>
-
-                    <thead>
+                </div>
+                <table class="table">
+                    <thead class="thead-dark">
                         <tr>
-
-                            <th>#</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Hành động</th>
-
+                            <th scope="col">#</th>
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col">Nhà sản xuất</th>
+                            <th scope="col">HSD</th>
+                            <th scope="col">Ảnh</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Mô tả</th>
+                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Hành động</th>
                         </tr>
-
                     </thead>
-
                     <tbody>
+                        <tr>
                         <?php
-                        foreach ($loai_hang as $item) {
+                        foreach ($san_pham as $item) {
+                       
                             extract($item);
                         ?>
                             <tr>
-                                <td><?= $MALSP ?></td>
-                                <td><?= $TENLSP ?></td>
+                                <td><?= $MASP ?></td>
+                                <td><?= $TENSP ?></td>
+                                <td><?= $NSX ?></td>
+                                <td><?= $HSD ?></td>
+                                <td style="width: 50px;"><img style="width: 50px;" src="../../storage/images/products/<?= $ANH ?>"></td>
+                                <td><?= $SOLUONG ?></td>
+                                <td><?= $MOTA ?></td>
+                                <td><?= $TRANGTHAI ?></td>
                                 <td>
-                                    <a href="?edit&MALSP=<?= $MALSP ?>"><i class="fa-solid fa-pen"></i></a>
-                                    <a onclick="return confirm('Ban có muốn xóa hay không ?')" href="?delete&MALSP=<?= $MALSP ?>"><i class="fa-solid fa-trash-can"></i></i></a>
+                                    <a href="?edit&MASP=<?= $MASP ?>"><i class="fa-solid fa-pen"></i></a>
+                                    <a onclick="return confirm('Ban có muốn xóa hay không ?')" href="?delete&MASP=<?= $MASP ?>"><i class="fa-solid fa-trash-can"></i></i></a>
                                 </td>
                             </tr>
                         <?php
                         }
                         ?>
+                        </tr>
                     </tbody>
                 </table>
             </div>

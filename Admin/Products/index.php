@@ -1,6 +1,6 @@
 <?php
 require "../../core/global.php";
-require "../../service/category.php";
+require "../../service/products.php";
 //--------------------------------//
 
 // check_login();
@@ -66,9 +66,9 @@ else if (exist_param("delete")) {
 } 
 
 else {
-    $loai_hang = loai_select_all();
-    $VIEW_NAME = "../Categories/list.php";
-    // dd($loai_hang);
+    $san_pham = Products_select_all();
+    // dd($san_pham);
+    $VIEW_NAME = "../Products/list.php";
 }
 
 require "../layout/main.php";

@@ -14,12 +14,12 @@
 
                 </li>
                 <li>
-                    <a href="IndexProduct.php">
+                    <a href="../Products/index.php">
                         <i class="fas fa-chart-bar"></i>Quản lý sản phẩm
                     </a>
                 </li>
                 <li>
-                    <a href="IndexCategories.php">
+                    <a href="../Categories/index.php">
                         <i class="fas fa-table"></i>Quản lý loại sản phẩm
                     </a>
                 </li>
