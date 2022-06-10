@@ -81,6 +81,7 @@ function get_cookie($name){
 function check_login(){
     global $SITE_URL;
     global $ADMIN_URL;
+    
     if(isset($_SESSION['user'])){
         if($_SESSION['user']['role'] == 1){
             return;

@@ -67,7 +67,7 @@ else if (exist_param("delete")) {
 
 else {
     $san_pham = Products_select_all();
-    // dd($san_pham);
+//     dd($san_pham[0]['GIANHAP']);
     $VIEW_NAME = "../Products/list.php";
 }
 
