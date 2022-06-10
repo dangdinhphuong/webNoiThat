@@ -58,7 +58,7 @@
                             extract($item);
                         ?>
                             <tr>
-                                <td><?= $MALSP ?> <?= $anh ?></td>
+                                <td><?= $MALSP ?></td>
                                 <td><?= $TENLSP ?></td>
                                 <td class="w-50"><img class="w-50" src="../../storage/images/category/<?= $anh ?>"></td>
                                 <td>
